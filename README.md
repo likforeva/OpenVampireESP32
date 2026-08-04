@@ -175,3 +175,175 @@ RAM:
 ## Version
 
 0.12.22
+# OpenVampireESP32 v0.12.24
+
+## Overview
+
+OpenVampireESP32 is an ESP32-based web interface for the Vampire Solar Controller.
+
+This firmware provides real-time monitoring, configuration, firmware updates and MQTT support through a modern web interface without requiring additional software.
+
+---
+
+## Features
+
+- Web-based monitoring
+- Real-time telemetry
+- Vampire configuration
+- Fuse configuration
+- MPPT configuration
+- ESP32 OTA update
+- Vampire firmware update
+- Wi-Fi configuration
+- MQTT support
+- Automatic Wi-Fi Access Point management
+- Wi-Fi signal indicator
+- Uptime display
+
+---
+
+## New in v0.12.24
+
+### Wi-Fi Status Indicator
+
+The header now includes a graphical Wi-Fi signal indicator similar to a mobile phone.
+
+Features:
+
+- Four-level signal indicator
+- Active bars are blue
+- Inactive bars are light gray
+- RSSI displayed in dBm
+- Automatic signal level update
+
+Signal levels:
+
+| RSSI | Bars |
+|------|------|
+| ≥ -55 dBm | ████ |
+| -56…-67 dBm | ███□ |
+| -68…-80 dBm | ██□□ |
+| -81…-90 dBm | █□□□ |
+| < -90 dBm | □□□□ |
+
+When the controller operates in Access Point mode, the indicator displays **WiFi AP**.
+
+---
+
+## Header Information
+
+The top status bar now displays:
+
+- Vampire Serial Number
+- Wi-Fi Signal Strength
+- RSSI (dBm)
+- ESP32 Uptime
+
+Second line:
+
+- Vampire Firmware Version
+- ESP32 Firmware Version
+- IP Address
+
+---
+
+## MQTT
+
+MQTT is optional and can be enabled or disabled from the web interface.
+
+Published topic:
+
+```
+tele/VAMPIRE/SV-xxxxxxxx/STATE
+```
+
+Published values:
+
+- PV1
+- PV2
+- PC1
+- PC2
+- PW1
+- PW2
+- BAT
+- SOC
+- CHR
+- DSC
+- LOAD
+- OUT
+
+---
+
+## Firmware Updates
+
+Supported:
+
+- ESP32 OTA update
+- Vampire firmware update
+
+Both update methods have been tested and verified.
+
+---
+
+## Memory Usage
+
+Flash:
+
+```
+935777 bytes
+```
+
+RAM:
+
+```
+46040 bytes
+```
+
+This version provides a large amount of free memory for future development.
+
+---
+
+## Hardware
+
+- ESP32 DevKit V1
+- Vampire Solar Controller
+
+---
+
+## Build
+
+PlatformIO
+
+Arduino Framework
+
+---
+
+## Version
+
+```
+0.12.24-wifi-bars-test
+```
+
+---
+
+## Changelog
+
+### Added
+
+- Graphical Wi-Fi signal indicator
+- Uptime display in header
+- Mobile-style signal bars
+
+### Improved
+
+- Header status information
+- User interface readability
+
+### Previous Features
+
+- Stable ESP32 OTA
+- Stable Vampire firmware update
+- MQTT support
+- Automatic AP shutdown
+- Web configuration
+- Real-time telemetry
