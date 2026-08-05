@@ -347,3 +347,15 @@ Arduino Framework
 - Automatic AP shutdown
 - Web configuration
 - Real-time telemetry
+
+OpenVampire ESP32 v0.12.39 – Unified SVG Logo & UI Improvements
+Statistics
+
+Energy statistics improvements from previous test versions remain available:
+
+Daily power graph.
+Monthly energy bar chart.
+Yearly energy bar chart.
+Selectable displayed parameter.
+Daily / Monthly / All-time summaries.
+CSV export.
